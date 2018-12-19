@@ -1,0 +1,53 @@
+swagger: "2.0"
+info:
+  description: "This is example documentation for the API"
+  version: "0.0.1"
+  title: "Example"
+  # termsOfService: "http://swagger.io/terms/"
+host : "localhost:8009"
+basePath: "/"
+
+definitions:
+
+  Health:
+    type: object
+    properties:
+      status:
+        type: string
+        enum: ["ok", "unhealthy"]
+
+  ReplaceMeModel:
+    type: object
+    properties:
+      name:
+        type: string
+      description:
+        type: string
+      completed:
+        type: boolean
+
+schemes:
+#- "https"
+- "http"
+
+paths:
+  /health:
+    get:
+      description: API health check route
+      produces:
+        - application/json
+      responses:
+        200:
+          description: API health check
+          schema:
+            $ref: "#/definitions/Health"
+  /replaceMe:
+    get:
+      description: Replace this with your API routes
+      produces:
+        - application/json
+      responses:
+        200:
+          description: Queried or all batches
+          schema:
+            $ref: "#/definitions/ReplaceMeModel"

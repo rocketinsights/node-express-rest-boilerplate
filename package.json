@@ -7,7 +7,7 @@
   "author": "www.rocketinsights.com",
   "scripts": {
     "dev": "nodemon -L src/index.js",
-    "lint" : "eslint .",
+    "lint": "eslint .",
     "lint:fix": "eslint --fix ."
   },
   "devDependencies": {
@@ -17,12 +17,13 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
-    "nodemon": "^1.18.9",
-    "eslint-plugin-standard": "^4.0.0"
+    "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^1.18.9"
   },
   "dependencies": {
     "bluebird": "^3.5.3",
     "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
     "dotenv-safe": "^6.1.0",
     "express": "^4.16.4",
     "winston": "^3.1.0"

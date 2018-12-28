@@ -1,14 +1,7 @@
 # overrides for local development
 version: '3'
-db:
-  image: postgres:9.6
-  environment:
-    POSTGRES_PASSWORD: 123456
-    POSTGRES_USER: mrqa
-  volumes:
-    - pgdata:/var/lib/postgresql/data
-  expose:
-    - 5432
+volumes: 
+  pgdata:
 services:
   api:
     # this starts up nodemon so it dynamically takes in changes
@@ -16,3 +9,14 @@ services:
     volumes:
       # This will mount in your source code into the image
       - .:/app
+  ## local database for testing
+  db:
+    image: postgres:11.1
+    environment:
+      POSTGRES_PASSWORD: 123456
+      POSTGRES_USER: devuser
+      POSTGRES_DB: testapp
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    expose:
+      - 5432

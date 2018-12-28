@@ -14,4 +14,5 @@ ADD . ${APP_DIR}
 
 EXPOSE ${APP_PORT}
 
+# TODO add processmanage
 CMD ["node", "./src/index.js"]

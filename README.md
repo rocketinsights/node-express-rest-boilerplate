@@ -43,7 +43,14 @@ From the project's directory run:
 ```bash
 docker-compose -f docker-compose.yml -f docker-compose.local.yml up
 ```
-This will use a base Docker Compose file meant to run in Production and extends it with some
+
+This will use a base Docker Compose file meant to run in Production and extends it with some handy things for development.
+
+To get into a shell while running the app in docker, run:
+
+```bash
+docker-compose exec api /bin/bash
+````
 
 ## To rebuild when dependencies are added
 

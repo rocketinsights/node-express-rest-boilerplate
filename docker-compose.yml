@@ -1,0 +1,9 @@
+version: '3'
+services:
+  api:
+    build:
+      context: .
+    ports:
+      - "8009:8009"
+    env_file:
+      - ./.env

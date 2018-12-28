@@ -31,8 +31,32 @@ Goals:
 - [ ] Authentication with PassportJS
 - [ ] Docker/Docker Compose setup
 
-# To get started
+# To get started with Development with Docker (best option)
 
+This is a full fledged development environment with a database running alongside it in a container
+as well.  It will pickup any local changes you make *except for dependency updates*.
+
+Make sure you have [Docker for Mac](https://docs.docker.com/docker-for-mac/) and Docker Compose installed.
+
+From the project's directory run:
+
+```bash
+docker-compose -f docker-compose.yml -f docker-compose.local.yml up
+```
+This will use a base Docker Compose file meant to run in Production and extends it with some
+
+## To rebuild when dependencies are added
+
+Run
+```bash
+docker-compose build
+```
+
+Then run the same `up` command as above.
+
+# To get started locally (without Docker)
+
+If you'd rather just develop locally and install databases there, etc, you can do the following:
 Run:
 `npm install` or `yarn install`
 

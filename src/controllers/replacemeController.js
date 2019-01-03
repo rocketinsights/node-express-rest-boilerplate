@@ -2,14 +2,14 @@
 const replaceMeService = require('../services/replacemeService')
 const logging = require('../logging')
 
-let getReplaceMes = (req, res) => {
+let getReplaceMes = async (req, res) => {
   logging.log('debug', 'Calling getModelItems')
-  return res.json(replaceMeService.getModelItems())
+  return res.json(await replaceMeService.getModelItems())
 }
 
-let addReplaceMes = (req, res) => {
+let addReplaceMes = async (req, res) => {
   logging.log('debug', 'Calling addReplaceMes')
-  return res.json(replaceMeService.addModelItem(req.body))
+  return res.json(await replaceMeService.addModelItem(req.body))
 }
 
 let updateReplaceMes = (req, res) => {

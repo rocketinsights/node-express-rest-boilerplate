@@ -1,5 +1,7 @@
 const Sequelize = require('sequelize')
 const logging = require('../logging')
+const modelsloader = require('./modelsloader')
+const path = require('path')
 
 const databaseConnectionString = process.env.DATABASE_CONNECTION_STRING
 
@@ -18,4 +20,10 @@ const dbConfigs = {
 logging.log('info', 'Connecting to database using configs: %o', dbConfigs)
 const sequelize = new Sequelize(databaseConnectionString, dbConfigs)
 
-module.exports = sequelize
+const models = modelsloader.load({ sequelize, baseFolder: path.join(__dirname, '/models') })
+
+module.exports = {
+  sequelize,
+  Sequelize,
+  models
+}

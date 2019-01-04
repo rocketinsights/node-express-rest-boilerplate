@@ -7,7 +7,9 @@ Goals:
 - KISS (Keep It Simple, Stupid)
 - Not to dictate application architectural patterns or implementation style/details.
 - Get an almost production-ready API up and running with a clone and replacement of minimal code.
-- Take care of the boilerplate "plumbing" around setting up a node REST API.
+- Take care of the boilerplate around setting up a node REST API.
+
+Once you get the project setup, look for the `FIXME`'s in the codebase for areas to replace/extend.
 
 *This project still needs feedback from other Rocketeers as of Dec 2018!*
 
@@ -19,17 +21,15 @@ Goals:
   * *services* - Business logic modules.  This could be renamed to something else or removed entirely.
   * *models* - TODO Data models
   * *server.js* - Core setup of Express
+  * *db* - Database setup placeholder, choose your own flavor.  See branches of repo for different types of datasource setup examples.
 * Common Express middleware already enabled (CORS, bodyparser, etc)
 * Environment variable configuration with [dotenv-safe](https://www.npmjs.com/package/dotenv-safe). 
   * See the `.env` file for configurable options and to add new ones.
 * Logging setup with [Winston](https://github.com/winstonjs/winston)
 
-## TODO's
+# Future Feature Ideas 
 
-- [ ] Hook up to a database (or different database flavors)
- - [ ] Add sample models
-- [ ] Authentication with PassportJS
-- [ ] Docker/Docker Compose setup
+- [] - Authentication/Authorization (passportJS)
 
 # To get started with Development with Docker (best option)
 

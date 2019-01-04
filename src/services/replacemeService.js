@@ -1,5 +1,8 @@
 const logging = require('../logging')
 const db = require('../db/index')
+/* FIXME Replace this service with your own, real service
+ This is just some garbage data you can replace */
+
 const initialTaskList = [
   {
     name: 'Send Welcome Email',
@@ -49,7 +52,7 @@ let addModelItem = async item => {
   })
 }
 
-let updateModelItem = item => {
+let updateModelItem = async (item) => {
   logging.log('debug', 'Updating item %o', item)
 
   return db.models.employee

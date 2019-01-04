@@ -29,12 +29,11 @@ Once you get the project setup, look for the `FIXME`'s in the codebase for areas
 
 # Future Feature Ideas 
 
-- [] - Authentication/Authorization (passportJS)
+- [ ] - Authentication/Authorization (passportJS)
 
 # To get started with Development with Docker (best option)
 
-This is a full fledged development environment with a database running alongside it in a container
-as well.  It will pickup any local changes you make *except for dependency updates*.
+This is a full fledged development environment which can be extended with a database or other data store running alongside it in a container as well.  It will pickup any local changes you make *except for dependency updates*.
 
 Make sure you have [Docker for Mac](https://docs.docker.com/docker-for-mac/) and Docker Compose installed.
 
@@ -60,6 +59,14 @@ docker-compose build
 ```
 
 Then run the same `up` command as above.
+
+
+You can test the app by running:
+```bash
+curl localhost:8009/replaceme
+```
+
+Or, a sample [Postman](https://www.getpostman.com/) collection can be imported (in the `docs` folder).
 
 # To get started locally (without Docker)
 

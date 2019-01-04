@@ -1,0 +1,9 @@
+# overrides for local development
+version: '3'
+services:
+  api:
+    # this starts up nodemon so it dynamically takes in changes
+    entrypoint: ["npm", "run", "dev"]
+    volumes:
+      # This will mount in your source code into the image
+      - .:/app

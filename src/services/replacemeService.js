@@ -1,5 +1,6 @@
 const logging = require('../logging')
-/* Replace this service with your own, real service
+/* FIXME Replace this service with your own, real service
+ They are marked as async assuming that this will be replaced with some sort of database logic.
  This is just some garbage data you can replace */
 let nextEmployeeId = 0
 let nextTaskid = 0
@@ -60,19 +61,19 @@ let employees = [
   }
 ]
 
-let getModelItems = () => {
+let getModelItems = async () => {
   return employees
 }
 
-let addModelItem = (item) => {
+let addModelItem = async (item) => {
   logging.log('debug', 'Adding item %o', item)
   item.id = nextEmployeeId++
-  item.tasks = createNewTaskList() 
+  item.tasks = createNewTaskList()
   employees.push(item)
   return item
 }
 
-let updateModelItem = (item) => {
+let updateModelItem = async (item) => {
   logging.log('debug', 'Updating item %o', item)
   employees.forEach((employee, i) => {
     if (item.id === employee.id) {

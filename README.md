@@ -8,6 +8,7 @@ Goals:
 - Not to dictate application architectural patterns or implementation style/details.
 - Get an almost production-ready API up and running with a clone and replacement of minimal code.
 - Take care of the boilerplate around setting up a node REST API.
+- Create a simple base for different "flavors" of this boilerplate for different datastores/frameworks. (See `/flavors` branches)
 
 Once you get the project setup, look for the `FIXME`'s in the codebase for areas to replace/extend.
 

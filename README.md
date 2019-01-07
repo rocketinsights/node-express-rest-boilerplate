@@ -38,6 +38,9 @@ The goals for this boilerplate are to:
 * Environment variable configuration with [dotenv-safe](https://www.npmjs.com/package/dotenv-safe). 
   * See the `.env` file for configurable options and to add new ones.
 * Logging setup with [Winston](https://github.com/winstonjs/winston)
+* Simple unit and integration test setup with [Mocha](https://mochajs.org/),
+    [Chai](https://www.chaijs.com/), and
+    [Supertest](https://github.com/visionmedia/supertest)
 * Dockerized - Simple Dockerfile setup with developer ready docker-compose file
 
 Once you get the project setup, look for the `FIXME`'s in the codebase for areas to replace/extend.

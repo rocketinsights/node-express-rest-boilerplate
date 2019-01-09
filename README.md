@@ -23,17 +23,16 @@ The goals for this boilerplate are to:
 - Keep the frontend separate (REST API only)
 - Avoid dictating architectural patterns, persistence options, or implementation style/details.
 - Get an somewhat-production-ready API up and running with a `git clone` and replacement of minimal code. (With the full realization that production ready code will need a lot more work and TLC)
-- Create a simple base for different "flavors" of this boilerplate for different datastores/frameworks. (See `/flavors` branches)
+- Create a simple base for different "flavors" of this boilerplate for different datastores/frameworks. 
 
 ## Features
 
 * Simple file/folder structure/layout:
-  * *routes* - Express route configurations
-  * *controllers* - Express controllers to handle requests/responses
-  * *services* - Business logic modules.  This could be renamed to something else or removed entirely.
-  * *models* - TODO Data models
-  * *server.js* - Core setup of Express
-  * *db* - Database setup placeholder, choose your own flavor.  See branches of repo for different types of datasource setup examples.
+  * *[routes](src/routes)* - Express route configurations
+  * *[controllers](src/controllers)* - Express controllers to handle requests/responses
+  * *[services](src/services)* - Business logic modules.  This could be renamed to something else or removed entirely.
+  * *[server.js](src/server.js)* - Core setup of Express
+  * *[db](src/db)* - Database setup placeholder, choose your own flavor.  See branches of repo for different types of datasource setup examples.
 * Common Express middleware already enabled (CORS, bodyparser, etc)
 * Environment variable configuration with [dotenv-safe](https://www.npmjs.com/package/dotenv-safe). 
   * See the `.env` file for configurable options and to add new ones.
@@ -41,6 +40,7 @@ The goals for this boilerplate are to:
 * Simple unit and integration test setup with [Mocha](https://mochajs.org/),
     [Chai](https://www.chaijs.com/), and
     [Supertest](https://github.com/visionmedia/supertest)
+* Easily extendable for your favorite data persistence techology.  Some examples already exist: See [branches](../../branches) named `flavors`
 * Dockerized - Simple Dockerfile setup with developer ready docker-compose file
 
 Once you get the project setup, look for the `FIXME`'s in the codebase for areas to replace/extend.

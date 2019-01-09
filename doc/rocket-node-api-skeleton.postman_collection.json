@@ -1,0 +1,92 @@
+{
+	"info": {
+		"_postman_id": "79425b91-d6a7-4d39-bc2d-454e5d8be3fe",
+		"name": "rocket-node-api-skeleton",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All ReplaceMe Items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8009/replaceme",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"replaceme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create New ReplaceMe Item",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"firstName\": \"New DB\",\n        \"lastName\": \"Guy 6\",\n        \"primaryLocation\": \"Newburyport\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8009/replaceme",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"replaceme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Single Replaceme Item",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"id\": 5,\n        \"firstName\": \"New DB\",\n        \"lastName\": \"Guy 4\",\n        \"primaryLocation\": \"NewburyportXXXX\",\n        \"createdAt\": \"2019-01-03T20:44:54.900Z\",\n        \"updatedAt\": \"2019-01-03T20:44:54.900Z\",\n        \"Tasks\": [\n            {\n                \"id\": 3,\n                \"name\": \"Send Welcome EmailXXXX\",\n                \"description\": \"Send an email to the candidate with the following information...\",\n                \"completed\": false,\n                \"createdAt\": \"2019-01-03T20:44:54.974Z\",\n                \"updatedAt\": \"2019-01-03T20:44:54.974Z\",\n                \"employeeId\": 5\n            },\n            {\n                \"id\": 4,\n                \"name\": \"Get them a computer\",\n                \"description\": \"\",\n                \"completed\": false,\n                \"createdAt\": \"2019-01-03T20:44:54.974Z\",\n                \"updatedAt\": \"2019-01-03T20:44:54.974Z\",\n                \"employeeId\": 5\n            },\n            {\n                \"id\": 5,\n                \"name\": \"Give them a key\",\n                \"description\": \"\",\n                \"completed\": false,\n                \"createdAt\": \"2019-01-03T20:44:54.974Z\",\n                \"updatedAt\": \"2019-01-03T20:44:54.974Z\",\n                \"employeeId\": 5\n            },\n            {\n                \"id\": 6,\n                \"name\": \"Give them some swag\",\n                \"description\": \"Stickers, socks, slippers (!)\",\n                \"completed\": false,\n                \"createdAt\": \"2019-01-03T20:44:54.975Z\",\n                \"updatedAt\": \"2019-01-03T20:44:54.975Z\",\n                \"employeeId\": 5\n            }\n        ]\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8009/replaceme",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8009",
+					"path": [
+						"replaceme"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

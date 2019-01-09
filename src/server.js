@@ -27,14 +27,6 @@ if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'local') 
   })
 }
 
-/**
- * Start Express server.
- */
-app.listen(app.get('port'), () => {
-  logging.log('info', 'App is running at http://localhost:%d in %s mode', app.get('port'), app.get('env'))
-  logging.log('info', '  Press CTRL-C to stop\n')
-})
-
 app.use(routes)
 
 module.exports = app

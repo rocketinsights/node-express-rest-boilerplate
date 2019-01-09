@@ -18,6 +18,7 @@ app.disable('x-powered-by')
  */
 if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'local') {
   // only use in development
+  logging.log('warn', 'Using verbose error reporting for development environment')
   const errorHandler = require('errorhandler')
   app.use(errorHandler())
 } else {

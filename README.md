@@ -23,7 +23,7 @@ The goals for this boilerplate are to:
 - Keep the frontend separate (REST API only)
 - Avoid dictating architectural patterns, persistence options, or implementation style/details.
 - Get an somewhat-production-ready API up and running with a `git clone` and replacement of minimal code. (With the full realization that production ready code will need a lot more work and TLC)
-- Create a simple base for different "flavors" of this boilerplate for different datastores/frameworks. 
+- Create a simple base for different "flavors" of this boilerplate for different datastores/frameworks.
 
 ## Features
 
@@ -96,3 +96,12 @@ curl localhost:8009/replaceme
 ```
 
 Also, a sample [Postman](https://www.getpostman.com/) collection can be imported (in the `docs` folder).
+
+## Automated Tests
+
+You can run the unit test suite with no database up and running by running:
+`npm run test:unit`
+
+If you have a database up, running and configured with `test/.env.ci.test` you can run end to end
+integration tests like this:
+`npm run test:integration`

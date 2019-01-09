@@ -5,7 +5,7 @@ const path = require('path')
 
 const databaseConnectionString = process.env.DATABASE_CONNECTION_STRING
 
-if (!databaseConnectionString) logging.log('fatal', 'No process.env.DATABSE_CONNECTION_STRING present')
+if (!databaseConnectionString) logging.log('fatal', 'No process.env.DATABASE_CONNECTION_STRING present')
 
 const dbConfigs = {
   dialect: process.env.DATABASE_DIALECT,

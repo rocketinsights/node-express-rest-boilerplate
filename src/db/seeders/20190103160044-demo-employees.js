@@ -12,7 +12,14 @@ module.exports = {
         primaryLocation : 'Newburyport',
         createdAt : new Date(),
         updatedAt: new Date()
-      }], {}).then(queryInterface.bulkInsert('Tasks', [
+      },
+     {
+        firstName: 'Another',
+        lastName: 'TestGuy',
+        primaryLocation : 'Boston',
+        createdAt : new Date(),
+        updatedAt: new Date()
+     }], {}).then(queryInterface.bulkInsert('Tasks', [
         {
           name : 'Do some stuff',
           description : null,
@@ -28,8 +35,23 @@ module.exports = {
           employeeId : 1,
           createdAt : new Date(),
           updatedAt : new Date(),
+        },
+        {
+          name : 'Do some stuff',
+          description : null,
+          completed: false,
+          employeeId : 2,
+          createdAt : new Date(),
+          updatedAt : new Date(),
+        },
+        {
+          name : 'Do some more stuff',
+          description : null,
+          completed: false,
+          employeeId : 2,
+          createdAt : new Date(),
+          updatedAt : new Date(),
         }
-
       ]),{});
   },
 

@@ -40,7 +40,9 @@ The goals for this boilerplate are to:
 * Simple unit and integration test setup with [Mocha](https://mochajs.org/),
     [Chai](https://www.chaijs.com/), and
     [Supertest](https://github.com/visionmedia/supertest)
-* Easily extendable for your favorite data persistence techology.  Some examples already exist: See [branches](../../branches) named `flavors`
+* Easily extendable for your favorite data persistence techology.  Some examples already exist: 
+  * [postgres and sequelize](../tree/flavors/db/postgres_sequelize)
+  * See [branches](../../branches) named `flavors`
 * Dockerized - Simple Dockerfile setup with developer ready docker-compose file
 
 Once you get the project setup, look for the `FIXME`'s in the codebase for areas to replace/extend.
@@ -103,6 +105,4 @@ Also, a sample [Postman](https://www.getpostman.com/) collection can be imported
 You can run the unit test suite with no database up and running by running: 
 `npm run test:unit`
 
-If you have a database up, running and configured with `test/.env.ci.test` you can run 
-end to end integration tests like this: 
-`npm run test:integration`
+Note that the database branches also have end to end integration tests configured.

@@ -49,6 +49,7 @@ Once you get the project setup, look for the `FIXME`'s in the codebase for areas
 
 # Future Feature Ideas 
 
+- [ ] - Add mongodb database flavor
 - [ ] - Authentication/Authorization (passportJS)
 - [ ] - Rate limiting
 

@@ -1,5 +1,7 @@
 # overrides for local development
 version: '3'
+volumes:
+  mongodata:
 services:
   api:
     # this starts up nodemon so it dynamically takes in changes
@@ -7,3 +9,15 @@ services:
     volumes:
       # This will mount in your source code into the image
       - .:/app
+  db: 
+    image: mongo:4.0.5
+    environment:
+      MONGO_INITDB_ROOT_PASSWORD: 123456
+      MONGO_INITDB_ROOT_USERNAME: devuser
+      MONGO_INITDB_DATABASE: testapp
+    volumes:
+      - mongodata:/var/lib/mongodb/data
+    ports: 
+      - 27012:27012
+    expose:
+      - 27012

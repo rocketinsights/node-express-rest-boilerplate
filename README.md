@@ -95,4 +95,14 @@ You can test the app by running:
 curl localhost:8009/replaceme
 ```
 
-Also, a sample [Postman](https://www.getpostman.com/) collection can be imported (in the `docs` folder).
+Also, a sample [Postman](https://www.getpostman.com/) collection can be imported 
+(in the `docs` folder).
+
+## Automated Tests
+
+You can run the unit test suite with no database up and running by running: 
+`npm run test:unit`
+
+If you have a database up, running and configured with `test/.env.ci.test` you can run 
+end to end integration tests like this: 
+`npm run test:integration`

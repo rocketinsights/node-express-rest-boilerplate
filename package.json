@@ -8,9 +8,12 @@
   "scripts": {
     "dev": "nodemon -L src/index.js",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix ."
+    "lint:fix": "eslint --fix .",
+    "test:unit": "mocha --opts test/unit/mocha.opts.unit",
+    "test:integration": "mocha --opts test/integration/mocha.opts.integration"
   },
   "devDependencies": {
+    "chai": "^4.2.0",
     "errorhandler": "^1.5.0",
     "eslint": "^5.10.0",
     "eslint-config-standard": "^12.0.0",
@@ -18,7 +21,11 @@
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
-    "nodemon": "^1.18.9"
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.9",
+    "proxyquire": "^2.1.0",
+    "sinon": "^7.2.2",
+    "supertest": "^3.3.0"
   },
   "dependencies": {
     "bluebird": "^3.5.3",

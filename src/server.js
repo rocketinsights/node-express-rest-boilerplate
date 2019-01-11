@@ -18,6 +18,7 @@ app.disable('x-powered-by')
  */
 if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'local') {
   // only use in development
+  logging.log('warn', 'Using verbose error reporting for development environment')
   const errorHandler = require('errorhandler')
   app.use(errorHandler())
 } else {
@@ -26,14 +27,6 @@ if (process.env.NODE_ENV === 'development' || process.env.NODE_ENV === 'local') 
     res.status(500).send('Server Error')
   })
 }
-
-/**
- * Start Express server.
- */
-app.listen(app.get('port'), () => {
-  logging.log('info', 'App is running at http://localhost:%d in %s mode', app.get('port'), app.get('env'))
-  logging.log('info', '  Press CTRL-C to stop\n')
-})
 
 app.use(routes)
 

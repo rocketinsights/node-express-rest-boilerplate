@@ -1,0 +1,5 @@
+test/setup.js
+test/integration/setup.js
+test/integration/**/*.spec.js
+--timeout 12000
+--recursive

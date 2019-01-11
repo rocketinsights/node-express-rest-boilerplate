@@ -41,7 +41,7 @@ The goals for this boilerplate are to:
     [Chai](https://www.chaijs.com/), and
     [Supertest](https://github.com/visionmedia/supertest)
 * Easily extendable for your favorite data persistence techology.  Some examples already exist: 
-  * [postgres and sequelize](../tree/flavors/db/postgres_sequelize)
+  * [postgres and sequelize](../../tree/flavors/db/postgres_sequelize)
   * See [branches](../../branches) named `flavors`
 * Dockerized - Simple Dockerfile setup with developer ready docker-compose file
 

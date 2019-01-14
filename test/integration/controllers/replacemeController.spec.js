@@ -9,7 +9,8 @@ describe('GET /replaceme', () => {
       .set('Accept', 'application/json')
       .expect(200)
       .then(response => {
-        return expect(response.body.length).to.equal(3)
+        // this is set in test/integration/data
+        return expect(response.body.length).to.equal(2)
       })
   })
 })

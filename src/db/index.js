@@ -45,8 +45,6 @@ const connect = async () => {
     logging.log('error', 'Mongoose connection error %o', error)
   })
 }
-
-
 module.exports = {
   connect
 }

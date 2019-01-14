@@ -1,0 +1,56 @@
+[
+  {
+    "firstName": "Jeffrey",
+    "lastName": "Lebowski",
+    "primaryLocation": "Newburyport",
+    "tasks": [
+      {
+        "name": "Send Welcome Email",
+        "description": "Send an email to the candidate with the following information...",
+        "completed": false
+      },
+      {
+        "name": "Get them a computer",
+        "description": "",
+        "completed": false
+      },
+      {
+        "name": "Give them a key",
+        "description": "",
+        "completed": false
+      },
+      {
+        "name": "Give them some swag",
+        "description": "Stickers, socks, slippers (!)",
+        "completed": false
+      }
+    ]
+  },
+  {
+    "firstName": "Don",
+    "lastName": "Draper",
+    "primaryLocation": "Boston",
+    "tasks": [
+      {
+        "name": "Send Welcome Email",
+        "description": "Send an email to the candidate with the following information...",
+        "completed": false
+      },
+      {
+        "name": "Get them a computer",
+        "description": "",
+        "completed": false
+      },
+      {
+        "name": "Give them a key",
+        "description": "",
+        "completed": false
+      },
+      {
+        "name": "Give them some swag",
+        "description": "Stickers, socks, slippers (!)",
+        "completed": false
+      }
+    ]
+  }
+]

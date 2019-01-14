@@ -42,6 +42,7 @@ The goals for this boilerplate are to:
     [Supertest](https://github.com/visionmedia/supertest)
 * Easily extendable for your favorite data persistence techology.  Some examples already exist: 
   * [postgres and sequelize](../../tree/flavors/db/postgres_sequelize)
+  * [MongoDB and Mongoose](../../tree/flavors/db/mongo-mongoose)
   * See [branches](../../branches) named `flavors`
 * Dockerized - Simple Dockerfile setup with developer ready docker-compose file
 
@@ -49,7 +50,6 @@ Once you get the project setup, look for the `FIXME`'s in the codebase for areas
 
 # Future Feature Ideas 
 
-- [ ] - Add mongodb database flavor
 - [ ] - Authentication/Authorization (passportJS)
 - [ ] - Rate limiting
 

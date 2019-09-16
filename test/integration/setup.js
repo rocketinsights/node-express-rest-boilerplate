@@ -5,9 +5,13 @@ const Promise = require('bluebird')
 
 const destroyAllModels = async () => {
   logging.log('warn', 'Destroying all models...')
-  return db.models.database.truncate({ cascade: true }).finally(() => {
+  try {
+    await db.models.database.truncate({ cascade: true })
+  } catch (err) {
+    logging.log('warn', 'Error destryong models, skipping because they might not exist yet!', err)
+  } finally {
     logging.log('info', 'Finished destroying models')
-  })
+  }
 }
 
 const executeSequelizeCliProcess = async command => {
@@ -35,10 +39,12 @@ const executeSequelizeCliProcess = async command => {
 }
 
 const seedDatabase = async () => {
+  logging.log('info', 'Seeding database for testing ...')
   return executeSequelizeCliProcess('db:seed:all')
 }
 
 const createDatabase = async () => {
+  logging.log('info', 'Creating database for testing ...')
   return executeSequelizeCliProcess('db:migrate')
 }
 

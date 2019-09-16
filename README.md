@@ -2,8 +2,6 @@
 
 Intended to get you started fast on an [Express](https://expressjs.com/)  REST API with no frontend.
 
-*This boilerplate is a work in progress as of January 2019 and still needs feedback from Rocketeers*
-
 ## There are a lot of great ExpressJS boilerplates out there, why did you create this one?
 
 [We need to develop one universal boilerplate that covers everyone's use cases...](https://xkcd.com/927/).  Just kidding...
@@ -50,11 +48,64 @@ Once you get the project setup, look for the `FIXME`'s in the codebase for areas
 - [ ] - Authentication/Authorization (passportJS)
 - [ ] - Rate limiting
 
-# To get started with Development with Docker
+# To get started developing without Docker
+
+If you'd rather just develop locally and install databases there, etc, you can do the following:
+Run:
+`npm install` or `yarn install`
+
+Then:
+`npm run dev` - This will start the app up using nodemon which will hot reload the app if it detects code changes.
+
+# To get started developing with a Docker database
+
+If you don't feel like installing databases locally, and you have docker-compose, you can run:
+`npm run test:start-test-db` 
+
+You'll have a nice fresh postgres database ready to go for yourself!
+
+Then run:
+`npm run dev`
+
+To startup the app.
+
+# Testing The App
+
+You can verify the app is working ok by running:
+```bash
+curl localhost:8009/replaceme
+```
+
+Also, a sample [Postman](https://www.getpostman.com/) collection can be imported (in the `docs` folder).
+
+## Automated Tests
+
+### Unit Tests
+You can run the unit test suite with no database up and running by running:
+`npm run test:unit`
+
+### Integration Tests (requires Docker Compose)
+
+If you have Docker compose and have already built the application image, running and configured with `test/.env.ci.test` you can run end to end
+integration tests like this if you're developing locally:
+
+First, start up the tests:
+`npm run test:start-test-db`
+
+Then, run the tests which will point to the docker database you just created:
+`npm run test:integration`
+
+# To get started with Development with Docker running everything 
 
 This is a full fledged development environment which can be extended with a database or other data store running alongside it in a container as well.  It will pickup any local changes you make *except for dependency updates*.
 
 Make sure you have [Docker for Mac](https://docs.docker.com/docker-for-mac/) and Docker Compose installed.
+
+First, edit the `.env` file to have the database point to the `db` host instead of `localhost` while you're inside the Docker network:
+
+```
+DATABASE_CONNECTION_STRING=postgres://devuser:123456@db:5432/testapp
+```
 
 From the project's directory run:
 
@@ -79,29 +130,7 @@ docker-compose build
 
 Then run the same `up` command as above.
 
-# To get started locally (without Docker)
 
-If you'd rather just develop locally and install databases there, etc, you can do the following:
-Run:
-`npm install` or `yarn install`
+## Testing inside docker
 
-Then:
-`npm run dev` - This will start the app up using nodemon which will hot reload the app if it detects code changes.
-
-# Testing The App
-
-You can test the app by running:
-```bash
-curl localhost:8009/replaceme
-```
-
-Also, a sample [Postman](https://www.getpostman.com/) collection can be imported (in the `docs` folder).
-
-## Automated Tests
-
-You can run the unit test suite with no database up and running by running:
-`npm run test:unit`
-
-If you have a database up, running and configured with `test/.env.ci.test` you can run end to end
-integration tests like this:
-`npm run test:integration`
+Run `npm test:integration:docker` inside the container to use a version of configurations that will play nicely inside the docker-compose network.

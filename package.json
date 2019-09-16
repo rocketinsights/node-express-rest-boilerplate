@@ -10,7 +10,10 @@
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "test:unit": "mocha --opts test/unit/mocha.opts.unit",
-    "test:integration": "mocha --opts test/integration/mocha.opts.integration"
+    "test:integration": "mocha --opts test/integration/mocha.opts.integration",
+    "test:start-test-db" : "docker-compose -f docker-compose.yml -f docker-compose.local.yml up -d db", 
+    "test:integration:docker" : "DATABASE_CONNECTION_STRING=postgres://devuser:123456@db:5432/testapp npm run test:integration"
+
   },
   "devDependencies": {
     "chai": "^4.2.0",
